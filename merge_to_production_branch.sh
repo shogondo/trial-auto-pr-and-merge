@@ -4,7 +4,7 @@ echo "Creating pull request..."
 STAGING_BRANCH="deploy/staging"
 PRODUCTION_BRANCH="deploy/production"
 DATE=`date +'%Y-%m-%d %H:%M:%S'`
-URL=`hub pull-request -m "$DATE Production deployment" -b $PRODUCTION_BRANCH -h $STAGING_BRANCH`
+URL=`hub pull-request -f -m "$DATE Production deployment" -b $PRODUCTION_BRANCH -h $STAGING_BRANCH`
 if [ $? -eq 0 ]; then
     echo "Pull request created (url='$URL')."
 else
