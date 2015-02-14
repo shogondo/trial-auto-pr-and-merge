@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Creating pull request..."
-STAGING_BRANCH="deploy/production"
+STAGING_BRANCH="deploy/staging"
 PRODUCTION_BRANCH="deploy/production"
 DATE=`date +'%Y-%m-%d %H:%M:%S'`
 URL=`hub pull-request -m "$DATE Production deployment" -b $PRODUCTION_BRANCH -h $STAGING_BRANCH`
